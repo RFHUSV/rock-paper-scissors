@@ -1,0 +1,37 @@
+h1 {
+    color: rgb(255, 255, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 64px;
+}
+body {
+    background-color: black;
+}
+
+button {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    height: 220px;
+    width: 220px;
+    border-radius: 16px;
+}
+
+img {
+    border-radius: 16px;
+}
+
+.buttons {
+    margin-top: 72px;
+    margin-bottom: 72px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.result {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: yellow;
+    font-size: 36px;
+}
