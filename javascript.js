@@ -26,16 +26,6 @@ function playRound (playerSelection, computerSelection) {
     }
 
 }
-function addResult (roundResult) {
-    const container = document.querySelector('.container');
-
-    const text = document.createElement('div');
-    text.classList.add('text');
-    text.textContent = roundResult();
-
-    container.appendChild(text);
-}
-
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
