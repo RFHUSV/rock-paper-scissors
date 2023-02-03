@@ -1,37 +1,50 @@
 const choice = ["rock", "paper", "scissors"];
-
-function getComputerChoice() {
+let resultText = "";
+function computerChoice() {
     let x = Math.floor(Math.random()*choice.length);
     return choice[x];
 }
 
-function playerChoice() {
-    let x = prompt("Choose rock, paper or scissors", "");
-    return x.toLowerCase();
-}
-
 function playRound (playerSelection, computerSelection) {
-    if (playerSelection === "rock" && computerSelection === "scissors") {
-        return alert("You Won! Rock beats Scissors");
-    } else if (playerSelection === "paper" && computerSelection === "rock") {
-        return alert("You Won! Paper beats Rock");
-    } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return alert("You Won! Scissors beats Paper");
-    } else if (playerSelection === "rock" && computerSelection === "paper") {
-        return alert("You Lose! Paper beats Rock");
-    } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        return alert("You Lose! Scissors beats Paper");
-    } else if (playerSelection == "scissors" && computerSelection === "rock") {
-        return alert("You Lose! Rock beats Scissors");
+    const container = document.querySelector('.container');
+    
+
+    if(playerSelection === 'rock' && computerSelection === 'scissors') {
+        container.textContent = 'You win! Rock beats scissors!';
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        container.textContent = 'You win! Paper beats rock!';
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        container.textContent = 'You win! Scissors beats paper!';
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        container.textContent = 'You lose! Paper beats rock!';
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        container.textContent = 'You lose! Scissors beats paper!';
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        container.textContent = 'You lose! Rock beats scissors!';
     } else {
-        alert("Tie!")
+        container.textContent = 'Tie!';
     }
+
+}
+function addResult (roundResult) {
+    const container = document.querySelector('.container');
+
+    const text = document.createElement('div');
+    text.classList.add('text');
+    text.textContent = roundResult();
+
+    container.appendChild(text);
 }
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        playRound(button.value, computerChoice());
+    });
+})
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound(playerChoice(), getComputerChoice());
-    }
-}
-game();
+
+
+
+
+

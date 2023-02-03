@@ -23,15 +23,24 @@ img {
 }
 
 .buttons {
-    margin-top: 72px;
-    margin-bottom: 72px;
+    margin-top: 96px;
+    margin-bottom: 128px;
     display: flex;
     justify-content: space-around;
 }
 
-.result {
+.container {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: yellow;
-    font-size: 36px;
+    font-size: 44px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    color: yellow;
+    margin-top: 96px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 40px;
 }
