@@ -10,19 +10,19 @@ function playRound (playerSelection, computerSelection) {
     
 
     if(playerSelection === 'rock' && computerSelection === 'scissors') {
-        container.textContent = 'You win! Rock beats scissors!';
+        container.textContent = 'You win! Your choice is rock. Computer\'s choice is scissors. Rock beats scissors!';
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        container.textContent = 'You win! Paper beats rock!';
+        container.textContent = 'You win! Your choice is paper. Computer\'s choice is rock. Paper beats rock!';
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        container.textContent = 'You win! Scissors beats paper!';
+        container.textContent = 'You win! Your choice is scissors. Computer\'s choice is paper. Scissors beats paper!';
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        container.textContent = 'You lose! Paper beats rock!';
+        container.textContent = 'You lose! Your choice is rock. Computer\'s choice is paper. Paper beats rock!';
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        container.textContent = 'You lose! Scissors beats paper!';
+        container.textContent = 'You lose! Your choice is paper. Computer\'s choice is scissors. Scissors beats paper!';
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        container.textContent = 'You lose! Rock beats scissors!';
+        container.textContent = 'You lose! Your choice is scissors. Computer\'s choice is rock. Rock beats scissors!';
     } else {
-        container.textContent = 'Tie!';
+        container.textContent = `Tie! Your choice is ${playerSelection}. Computer's choice is ${computerSelection}`;
     }
 
 }
